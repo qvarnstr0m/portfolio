@@ -1,0 +1,208 @@
+/* main.css */
+html,
+body {
+  height: 100%;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #242424;
+  font-family: "Raleway", "Inter", sans-serif;
+  color: #dddddd;
+  min-height: 100vh;
+}
+
+/* Footer section to stick to bottom of pages */
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 2rem;
+  justify-content: space-between;
+}
+
+footer {
+  margin-top: auto;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+/* Filler section for pushing footer do bottom */
+.filler-section {
+  flex: 1;
+}
+
+li {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Set style for <a> tags*/
+a {
+  color: #dddddd;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.3;
+}
+
+/* Set styles for header text */
+.header-text {
+  width: 100%;
+}
+
+/* Set styles for row and column combinations */
+.row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.two-columns {
+  width: 45%;
+}
+
+/* Set custom styles for images */
+.two-columns img {
+  max-width: 90%;
+  height: auto;
+}
+
+/* Set responsive css styles */
+body {
+  margin: 0;
+}
+
+/* Extra large screens */
+@media (min-width: 1920px) {
+  body {
+    margin: 0 20%;
+  }
+
+  .photo-me {
+    float: right;
+  }
+}
+
+/* Large screens */
+@media (max-width: 1919px) and (min-width: 1280px) {
+  body {
+    margin: 0 15%;
+  }
+
+  .photo-me {
+    float: right;
+  }
+}
+
+/* Medium screens */
+@media (max-width: 1279px) and (min-width: 960px) {
+  body {
+    margin: 0 15%;
+  }
+}
+
+/* Small screens */
+@media (max-width: 959px) and (min-width: 601px) {
+  body {
+    margin: 0 10%;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .two-columns {
+    width: 100%;
+  }
+
+  .photo-me {
+    max-width: 100%;
+  }
+
+  .two-columns img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .order-1 {
+    order: 1;
+  }
+
+  .order-2 {
+    order: 2;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 600px) {
+  body {
+    margin: 0 5%;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .two-columns {
+    width: 100%;
+  }
+
+  .two-columns img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .order-1 {
+    order: 1;
+  }
+
+  .order-2 {
+    order: 2;
+  }
+}
+
+/* Styling for the navbar */
+
+.topnav {
+  margin-top: 2rem;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding-right: 2rem;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  text-decoration: underline;
+}
