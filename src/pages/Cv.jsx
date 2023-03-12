@@ -12,7 +12,6 @@ const Cv = () => {
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
-      // https://api.github.com/users/juiceghost/repos
       const result = await axios("./src/assets/cv.json");
       setData(result.data);
       setIsLoading(false);
@@ -20,7 +19,7 @@ const Cv = () => {
 
     fetchData();
   }, []);
-  const myName = "martin";
+
   return (
     <main>
       <div>

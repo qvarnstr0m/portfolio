@@ -1,6 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const About = () => {
+  useEffect(() => {
+    const changeBg = () => {
+      const secretArea = document.getElementById("secret");
+    
+      secretArea.onclick = () => {
+        document.body.style.backgroundImage = "url('../src/assets/newbg.png')";
+      };
+    };
+  
+    changeBg();
+  }, []);
+
   return (
     <main>
       <div>
