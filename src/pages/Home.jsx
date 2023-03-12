@@ -1,6 +1,24 @@
 import React from "react";
+import Leet from "../components/Leet";
 
 const Home = () => {
+  const openModal = () => {
+    const secretCode = "leet";
+    let userInput = "";
+
+    document.addEventListener("keydown", (event) => {
+      userInput += event.key.toLowerCase();
+      console.log(userInput);
+      if (userInput.includes(secretCode)) {
+        const label = document.querySelector("label[for='secret']");
+        label.click();
+        userInput = "";
+      }
+    });
+  };
+
+  openModal();
+
   return (
     <main>
       <div>
@@ -37,6 +55,7 @@ const Home = () => {
           />
         </div>
       </div>
+      <Leet />
     </main>
   );
 };

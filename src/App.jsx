@@ -10,18 +10,17 @@ function App() {
     <Router>
       <div className="app">
         <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Cv" element={<Cv />} />
-        <Route path="/Portfolio" element={<Portfolio />} />
-        <Route path="/Wcag" element={<Wcag />} />
-        <Route path="/Activities" element={<Activities />} />
-      </Routes>
-      <Filler />
-      <Footer />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Cv" element={<Cv />} />
+          <Route path="/Portfolio" element={<Portfolio />} />
+          <Route path="/Wcag" element={<Wcag />} />
+          <Route path="/Activities" element={<Activities />} />
+        </Routes>
+        <Filler />
+        <Footer />
       </div>
-      
     </Router>
   );
 }
