@@ -13,7 +13,8 @@ const Portfolio = () => {
       const result = await axios(
         "https://api.github.com/users/qvarnstr0m/repos"
       );
-      setData(result.data);
+      console.log(result.data);
+      setData({ work: result.data });
       setIsLoading(false);
     };
 
@@ -29,32 +30,34 @@ const Portfolio = () => {
         <div className="two-columns">
           <p>
             Here you can find a few of my projects. A few are school projects,
-            most are personal. To see all of my projects, check out <a
+            most are personal. To see all of my projects, check out{" "}
+            <a
               href="https://www.github.com/qvarnstr0m"
               target="_blank"
               rel="noopener noreferrer"
-            >github.com/qvarnstr0m</a>
+            >
+              github.com/qvarnstr0m
+            </a>
           </p>
         </div>
         <div className="two-columns"></div>
       </div>
       <div className="row">
-        
         {isLoading ? (
-            <p>Loading...</p>
-          ) : data.contact ? (
-            <ListProjects data={data} />
-          ) : (
-            <p>No contact.</p>
-          )}
+          <p>Loading...</p>
+        ) : data.work && data.work.length > 0 ? (
+          <ListProjects data={data.work} />
+        ) : (
+          <p>No projects.</p>
+        )}
       </div>
       {isLoading ? (
-            <p>Loading...</p>
-          ) : data.contact ? (
-            <ListModals data={data} />
-          ) : (
-            <p>No contact.</p>
-          )}
+        <p>Loading...</p>
+      ) : data.work && data.work.length > 0 ? (
+        <ListModals data={data.work} />
+      ) : (
+        <p>No projects.</p>
+      )}
     </main>
   );
 };
