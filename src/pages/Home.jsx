@@ -48,11 +48,7 @@ const Home = () => {
           </p>
         </div>
         <div className="two-columns order-1">
-          <img
-            src="../src/assets/me.jpg"
-            className="photo-me"
-            alt="Photo of me"
-          />
+          <img src="src/assets/me.jpg" className="photo-me" alt="Photo of me" />
         </div>
       </div>
       <Leet />
