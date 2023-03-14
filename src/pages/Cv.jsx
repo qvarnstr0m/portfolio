@@ -12,7 +12,7 @@ const Cv = () => {
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
-      const result = await axios("src/assets/cv.json");
+      const result = await axios("cv.json");
       setData(result.data);
       setIsLoading(false);
     };
